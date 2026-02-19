@@ -33,12 +33,12 @@ export default function Footer() {
             <h4 className="text-lg font-bold text-white mb-6 font-heading uppercase tracking-widest">Kontakt</h4>
             <ul className="space-y-4 text-slate-400 font-sans">
               <li className="flex items-start">
-                <span>Østergågade 12<br />4800 Nykøbing Falster</span>
+                <span>Skovvej 12<br />4800 Nykøbing F</span>
               </li>
-              <li className="font-bold text-slate-500 uppercase tracking-tighter text-xs">CVR: 12345678</li>
+              <li className="font-bold text-slate-500 uppercase tracking-tighter text-xs">CVR: 34119406</li>
               <li className="pt-2">
-                <a href="tel:+4512345678" className="text-white hover:text-accent transition-colors font-bold text-lg">
-                  +45 12 34 56 78
+                <a href="tel:+4560226068" className="text-white hover:text-accent transition-colors font-bold text-lg">
+                  +45 60 22 60 68
                 </a>
               </li>
               <li>

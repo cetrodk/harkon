@@ -51,8 +51,8 @@ export default function ContactForm() {
                   <h4 className="text-xl font-bold text-primary mb-2 font-heading">Adresse</h4>
                   <p className="text-secondary leading-relaxed">
                     Harkon Byggerådgivning ApS<br />
-                    Østergågade 12<br />
-                    4800 Nykøbing Falster
+                    Skovvej 12<br />
+                    4800 Nykøbing F
                   </p>
                 </div>
               </div>
@@ -64,8 +64,8 @@ export default function ContactForm() {
                 <div className="ml-8">
                   <h4 className="text-xl font-bold text-primary mb-2 font-heading">Telefon</h4>
                   <p className="text-secondary leading-relaxed">
-                    <a href="tel:+4512345678" className="hover:text-accent transition-colors font-semibold">
-                      +45 12 34 56 78
+                    <a href="tel:+4560226068" className="hover:text-accent transition-colors font-semibold">
+                      +45 60 22 60 68
                     </a>
                   </p>
                   <p className="text-sm text-slate-400 mt-2 font-bold uppercase tracking-wider">Man-Fre: 08:00 - 16:00</p>
@@ -142,7 +142,7 @@ export default function ContactForm() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-6 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all bg-slate-50 focus:bg-white font-medium"
-                    placeholder="+45 12 34 56 78"
+                    placeholder="+45 60 22 60 68"
                   />
                 </div>
               </div>

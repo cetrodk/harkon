@@ -31,11 +31,11 @@ export default function CTA() {
               <ArrowRight className="ml-2 h-6 w-6" />
             </a>
             <a
-              href="tel:+4512345678"
+              href="tel:+4560226068"
               className="inline-flex items-center justify-center px-10 py-5 border-2 border-white/10 text-lg font-bold rounded-xl text-white hover:bg-white/10 transition-all backdrop-blur-md active:scale-95 duration-300"
             >
               <Phone className="mr-2 h-6 w-6" />
-              Ring til os: +45 12 34 56 78
+              Ring til os: +45 60 22 60 68
             </a>
           </div>
         </motion.div>
