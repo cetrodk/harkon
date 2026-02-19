@@ -6,6 +6,7 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import PriceExample from './components/PriceExample';
 import About from './components/About';
 import Showcase from './components/Showcase';
 import Testimonials from './components/Testimonials';
@@ -26,6 +27,7 @@ export default function App() {
       <main id="main-content">
         <Hero />
         <Services />
+        <PriceExample />
         <About />
         <Showcase />
         <Testimonials />
