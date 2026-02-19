@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { MapPin, CheckCircle, Award, Users } from 'lucide-react';
+import aboutImg from '@/src/assets/about.webp';
 
 export default function About() {
   return (
@@ -71,7 +72,7 @@ export default function About() {
 
             <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
               <img
-                src="https://images.unsplash.com/photo-1664575602554-2087b04935a5?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={aboutImg}
                 alt="Team working together"
                 className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
               />
