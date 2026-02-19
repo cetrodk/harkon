@@ -21,25 +21,25 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="max-w-3xl"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight mb-6 leading-tight">
-            Professionel <span className="text-[#FF6600]">Byggerådgivning</span> <br />
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 leading-[1.1] font-heading">
+            Professionel <span className="text-accent">Byggerådgivning</span> <br />
             i Nykøbing Falster
           </h1>
-          <p className="text-lg sm:text-xl text-slate-300 mb-8 max-w-2xl leading-relaxed">
-            Vi hjælper dig med at realisere dit byggeprojekt. Fra idé til færdigt byggeri. 
+          <p className="text-lg sm:text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed">
+            Vi hjælper dig med at realisere dit byggeprojekt med teknisk præcision og arkitektonisk indsigt.
             Specialiseret rådgivning inden for byggeri, anlæg og energioptimering.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
+          <div className="flex flex-col sm:flex-row gap-5 justify-center sm:justify-start">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-full text-white bg-[#3182CE] hover:bg-[#2c75ba] transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="inline-flex items-center justify-center px-10 py-5 border border-transparent text-lg font-semibold rounded-xl text-white bg-cta hover:bg-cta-hover transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1 active:scale-95 duration-300"
             >
               Få et uforpligtende tilbud
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-6 w-6" />
             </a>
             <a
               href="#services"
-              className="inline-flex items-center justify-center px-8 py-4 border border-white/20 text-base font-medium rounded-full text-white hover:bg-white/10 transition-all backdrop-blur-sm"
+              className="inline-flex items-center justify-center px-10 py-5 border border-white/30 text-lg font-semibold rounded-xl text-white hover:bg-white/10 transition-all backdrop-blur-md active:scale-95 duration-300"
             >
               Se vores ydelser
             </a>

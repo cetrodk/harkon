@@ -40,60 +40,59 @@ export default function Testimonials() {
 
   return (
     <section className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute top-0 left-0 w-full h-full bg-[#3182CE]/5 -skew-y-3 transform origin-top-left z-0" />
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-12">
-          Hvad siger vores <span className="text-[#3182CE]">kunder?</span>
+      <div className="absolute top-0 left-0 w-full h-full bg-accent/5 -skew-y-3 transform origin-top-left z-0" />
+
+      <div className="max-w-4xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-16 font-heading">
+          Hvad siger vores <span className="text-accent">kunder?</span>
         </h2>
 
-        <div className="relative bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-slate-100">
-          <Quote className="absolute top-8 left-8 w-12 h-12 text-[#FF6600]/20" />
-          
+        <div className="relative bg-white p-10 md:p-16 rounded-[2.5rem] shadow-2xl border border-slate-100">
+          <Quote className="absolute top-10 left-10 w-16 h-16 text-accent/10" />
+
           <div className="min-h-[200px] flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.3 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
                 className="text-center"
               >
-                <p className="text-xl md:text-2xl text-slate-700 italic mb-8 leading-relaxed">
+                <p className="text-xl md:text-3xl text-primary font-medium italic mb-10 leading-relaxed font-sans">
                   "{testimonials[currentIndex].text}"
                 </p>
                 <div>
-                  <h4 className="text-lg font-bold text-slate-900">{testimonials[currentIndex].name}</h4>
-                  <p className="text-slate-500 text-sm">{testimonials[currentIndex].role}</p>
+                  <h4 className="text-2xl font-bold text-primary mb-1 font-heading">{testimonials[currentIndex].name}</h4>
+                  <p className="text-secondary font-bold uppercase tracking-widest text-sm">{testimonials[currentIndex].role}</p>
                 </div>
               </motion.div>
             </AnimatePresence>
           </div>
 
-          <div className="flex justify-center mt-8 space-x-4">
+          <div className="flex justify-center mt-12 space-x-6">
             <button
               onClick={prevTestimonial}
-              className="p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors"
+              className="p-3 rounded-xl bg-slate-50 hover:bg-slate-100 text-secondary transition-all active:scale-95 border border-slate-200"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
-            <div className="flex space-x-2 items-center">
+            <div className="flex space-x-3 items-center">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                    index === currentIndex ? 'bg-[#3182CE]' : 'bg-slate-300'
-                  }`}
+                  className={`transition-all duration-300 rounded-full ${index === currentIndex ? 'w-8 h-2.5 bg-accent' : 'w-2.5 h-2.5 bg-slate-200 hover:bg-slate-300'
+                    }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
               ))}
             </div>
             <button
               onClick={nextTestimonial}
-              className="p-2 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors"
+              className="p-3 rounded-xl bg-slate-50 hover:bg-slate-100 text-secondary transition-all active:scale-95 border border-slate-200"
               aria-label="Next testimonial"
             >
               <ChevronRight className="w-6 h-6" />

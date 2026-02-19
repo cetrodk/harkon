@@ -23,33 +23,33 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          
+    <section id="contact" className="py-24 bg-[#F8FAFC]">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
-              Kontakt <span className="text-[#3182CE]">Os</span>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-8 font-heading">
+              Kontakt <span className="text-accent underline decoration-accent/20 underline-offset-8">Os</span>
             </h2>
-            <p className="text-lg text-slate-600 mb-12 leading-relaxed">
-              Har du spørgsmål, eller ønsker du et uforpligtende tilbud på dit byggeprojekt? 
-              Udfyld formularen eller kontakt os direkte.
+            <p className="text-lg text-secondary mb-12 leading-relaxed font-sans">
+              Har du spørgsmål, eller ønsker du et uforpligtende tilbud på dit byggeprojekt?
+              Udfyld formularen eller kontakt os direkte. Vi svarer inden for 24 timer.
             </p>
 
-            <div className="space-y-8">
-              <div className="flex items-start">
-                <div className="flex-shrink-0 bg-[#3182CE]/10 p-4 rounded-full">
-                  <MapPin className="w-6 h-6 text-[#3182CE]" />
+            <div className="space-y-10">
+              <div className="flex items-start group">
+                <div className="flex-shrink-0 bg-cta/5 p-5 rounded-[1.25rem] group-hover:bg-cta/10 transition-colors duration-300">
+                  <MapPin className="w-7 h-7 text-cta" />
                 </div>
-                <div className="ml-6">
-                  <h4 className="text-lg font-bold text-slate-900 mb-1">Adresse</h4>
-                  <p className="text-slate-600">
+                <div className="ml-8">
+                  <h4 className="text-xl font-bold text-primary mb-2 font-heading">Adresse</h4>
+                  <p className="text-secondary leading-relaxed">
                     Harkon Byggerådgivning ApS<br />
                     Østergågade 12<br />
                     4800 Nykøbing Falster
@@ -57,29 +57,29 @@ export default function ContactForm() {
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="flex-shrink-0 bg-[#FF6600]/10 p-4 rounded-full">
-                  <Phone className="w-6 h-6 text-[#FF6600]" />
+              <div className="flex items-start group">
+                <div className="flex-shrink-0 bg-accent/5 p-5 rounded-[1.25rem] group-hover:bg-accent/10 transition-colors duration-300">
+                  <Phone className="w-7 h-7 text-accent" />
                 </div>
-                <div className="ml-6">
-                  <h4 className="text-lg font-bold text-slate-900 mb-1">Telefon</h4>
-                  <p className="text-slate-600">
-                    <a href="tel:+4512345678" className="hover:text-[#3182CE] transition-colors">
+                <div className="ml-8">
+                  <h4 className="text-xl font-bold text-primary mb-2 font-heading">Telefon</h4>
+                  <p className="text-secondary leading-relaxed">
+                    <a href="tel:+4512345678" className="hover:text-accent transition-colors font-semibold">
                       +45 12 34 56 78
                     </a>
                   </p>
-                  <p className="text-sm text-slate-500 mt-1">Man-Fre: 08:00 - 16:00</p>
+                  <p className="text-sm text-slate-400 mt-2 font-bold uppercase tracking-wider">Man-Fre: 08:00 - 16:00</p>
                 </div>
               </div>
 
-              <div className="flex items-start">
-                <div className="flex-shrink-0 bg-[#3182CE]/10 p-4 rounded-full">
-                  <Mail className="w-6 h-6 text-[#3182CE]" />
+              <div className="flex items-start group">
+                <div className="flex-shrink-0 bg-cta/5 p-5 rounded-[1.25rem] group-hover:bg-cta/10 transition-colors duration-300">
+                  <Mail className="w-7 h-7 text-cta" />
                 </div>
-                <div className="ml-6">
-                  <h4 className="text-lg font-bold text-slate-900 mb-1">Email</h4>
-                  <p className="text-slate-600">
-                    <a href="mailto:info@harkon.dk" className="hover:text-[#3182CE] transition-colors">
+                <div className="ml-8">
+                  <h4 className="text-xl font-bold text-primary mb-2 font-heading">Email</h4>
+                  <p className="text-secondary leading-relaxed">
+                    <a href="mailto:info@harkon.dk" className="hover:text-cta transition-colors font-semibold">
                       info@harkon.dk
                     </a>
                   </p>
@@ -90,15 +90,17 @@ export default function ContactForm() {
 
           {/* Form */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-white p-8 md:p-10 rounded-2xl shadow-lg border border-slate-100"
+            className="bg-white p-10 md:p-12 rounded-[2.5rem] shadow-2xl border border-slate-100 relative overflow-hidden"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-accent opacity-5 rounded-bl-full" />
+
+            <form onSubmit={handleSubmit} className="space-y-8 relative z-10">
+              <div className="space-y-2">
+                <label htmlFor="name" className="block text-sm font-bold text-primary uppercase tracking-widest ml-1">
                   Navn
                 </label>
                 <input
@@ -108,14 +110,14 @@ export default function ContactForm() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#3182CE] focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white"
+                  className="w-full px-6 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all bg-slate-50 focus:bg-white font-medium"
                   placeholder="Dit fulde navn"
                 />
               </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="space-y-2">
+                  <label htmlFor="email" className="block text-sm font-bold text-primary uppercase tracking-widest ml-1">
                     Email
                   </label>
                   <input
@@ -125,12 +127,12 @@ export default function ContactForm() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#3182CE] focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white"
+                    className="w-full px-6 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all bg-slate-50 focus:bg-white font-medium"
                     placeholder="din@email.dk"
                   />
                 </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
+                <div className="space-y-2">
+                  <label htmlFor="phone" className="block text-sm font-bold text-primary uppercase tracking-widest ml-1">
                     Telefon
                   </label>
                   <input
@@ -139,14 +141,14 @@ export default function ContactForm() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#3182CE] focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white"
+                    className="w-full px-6 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all bg-slate-50 focus:bg-white font-medium"
                     placeholder="+45 12 34 56 78"
                   />
                 </div>
               </div>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
+              <div className="space-y-2">
+                <label htmlFor="message" className="block text-sm font-bold text-primary uppercase tracking-widest ml-1">
                   Besked
                 </label>
                 <textarea
@@ -155,18 +157,18 @@ export default function ContactForm() {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-[#3182CE] focus:border-transparent outline-none transition-all bg-slate-50 focus:bg-white resize-none"
+                  rows={5}
+                  className="w-full px-6 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all bg-slate-50 focus:bg-white resize-none font-medium"
                   placeholder="Beskriv dit projekt..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-lg text-white bg-[#3182CE] hover:bg-[#2c75ba] transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1"
+                className="w-full inline-flex items-center justify-center px-10 py-5 border border-transparent text-lg font-bold rounded-xl text-white bg-cta hover:bg-cta-hover transition-all shadow-xl hover:shadow-2xl active:scale-95 duration-300"
               >
                 Send besked
-                <Send className="ml-2 h-5 w-5" />
+                <Send className="ml-2 h-6 w-6" />
               </button>
             </form>
           </motion.div>
