@@ -73,7 +73,10 @@ export default function About() {
             <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-8 border-white">
               <img
                 src={aboutImg}
-                alt="Team working together"
+                alt="Harkon Byggerådgivnings team i arbejde — lokal byggerådgivning med teknisk ekspertise i Nykøbing Falster"
+                width="800"
+                height="600"
+                loading="lazy"
                 className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60" />

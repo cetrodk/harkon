@@ -1,0 +1,11 @@
+# robots.txt for harkon.dk
+# Generated for production deployment
+
+User-agent: *
+Allow: /
+
+# Block any build artifacts or internal paths if they exist
+Disallow: /api/
+
+# Sitemap location — helps crawlers discover all indexable URLs
+Sitemap: https://www.harkon.dk/sitemap.xml

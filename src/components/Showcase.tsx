@@ -5,21 +5,26 @@ const projects = [
   {
     title: 'Nyt Boligkvarter',
     category: 'Bygherrerådgivning',
+    // SEO alt: describe the image content, context and relevance to the business
+    alt: 'Nyt boligkvarter med moderne parcelhuse — Harkon Byggerådgivning varetog bygherrerådgivning fra idé til aflevering',
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     title: 'Erhvervsbyggeri',
     category: 'Projektering',
+    alt: 'Moderne erhvervsbygning med glasfacade — projektering og ingeniørrådgivning udført af Harkon Byggerådgivning',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     title: 'Energirenovering',
     category: 'Tegnestue',
+    alt: 'Energirenovering af eksisterende bolig med nye vinduer og isolering — teknisk tegnestueprojekt hos Harkon',
     image: 'https://images.unsplash.com/photo-1593693397690-362cb1566ee6?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     title: 'Offentlig Institution',
     category: 'Tilsyn',
+    alt: 'Offentlig institutionsbygning under opførelse — Harkon Byggerådgivning førte kvalitetstilsyn på projektet',
     image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
 ];
@@ -49,7 +54,7 @@ export default function Showcase() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
           {projects.map((project, index) => (
             <motion.div
-              key={index}
+              key={project.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -58,7 +63,10 @@ export default function Showcase() {
             >
               <img
                 src={project.image}
-                alt={project.title}
+                alt={project.alt}
+                width="600"
+                height="800"
+                loading="lazy"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />

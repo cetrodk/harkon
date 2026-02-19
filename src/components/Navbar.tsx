@@ -1,28 +1,30 @@
-import { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { useState, useEffect, useCallback } from 'react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+
+const navLinks = [
+  { name: 'Ydelser', href: '#services' },
+  { name: 'Om os', href: '#about' },
+  { name: 'Projekter', href: '#projects' },
+  { name: 'Kontakt', href: '#contact' },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+  const handleScroll = useCallback(() => {
+    setScrolled(window.scrollY > 20);
   }, []);
 
-  const navLinks = [
-    { name: 'Ydelser', href: '#services' },
-    { name: 'Om os', href: '#about' },
-    { name: 'Projekter', href: '#projects' },
-    { name: 'Kontakt', href: '#contact' },
-  ];
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
 
   return (
     <nav
+      aria-label="Hovednavigation"
       className={`fixed z-50 transition-all duration-500 ${scrolled
           ? 'top-4 left-4 right-4 bg-white/80 backdrop-blur-lg shadow-lg border border-slate-200/50 rounded-2xl py-3'
           : 'top-0 left-0 right-0 bg-transparent py-6'
@@ -31,7 +33,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0 flex items-center">
-            <a href="#" className={`text-2xl font-bold tracking-tighter font-heading ${scrolled ? 'text-primary' : 'text-white'}`}>
+            <a href="#" aria-label="Harkon Byggerådgivning — gå til forsiden" className={`text-2xl font-bold tracking-tighter font-heading ${scrolled ? 'text-primary' : 'text-white'}`}>
               HARKON<span className="text-accent">.</span>
             </a>
           </div>
@@ -62,6 +64,8 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className={`p-2 rounded-xl transition-colors ${scrolled ? 'text-primary hover:bg-slate-100' : 'text-white hover:bg-white/10'}`}
+              aria-label={isOpen ? 'Luk menu' : 'Åbn menu'}
+              aria-expanded={isOpen}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>

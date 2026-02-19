@@ -1,26 +1,48 @@
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, useCallback } from 'react';
+import type { ChangeEvent, FormEvent } from 'react';
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
+interface ContactFormData {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
+
+const initialFormData: ContactFormData = {
+  name: '',
+  email: '',
+  phone: '',
+  message: '',
+};
+
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-  });
+  const [formData, setFormData] = useState<ContactFormData>(initialFormData);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const handleChange = useCallback((e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  }, []);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = useCallback(async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log('Form submitted:', formData);
-    alert('Tak for din besked! Vi vender tilbage hurtigst muligt.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
-  };
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      // TODO: Replace with actual API call
+      await new Promise(resolve => setTimeout(resolve, 500));
+      setSubmitStatus('success');
+      setFormData(initialFormData);
+    } catch {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  }, []);
 
   return (
     <section id="contact" className="py-24 bg-[#F8FAFC]">
@@ -42,7 +64,13 @@ export default function ContactForm() {
               Udfyld formularen eller kontakt os direkte. Vi svarer inden for 24 timer.
             </p>
 
-            <div className="space-y-10">
+            {/*
+              <address> is the correct semantic element for contact information.
+              It signals to parsers (including Google's Knowledge Graph) that
+              this block contains the organisation's contact details.
+              not-italic removes the browser's default italic styling for <address>.
+            */}
+            <address className="not-italic space-y-10">
               <div className="flex items-start group">
                 <div className="flex-shrink-0 bg-cta/5 p-5 rounded-[1.25rem] group-hover:bg-cta/10 transition-colors duration-300">
                   <MapPin className="w-7 h-7 text-cta" />
@@ -52,7 +80,7 @@ export default function ContactForm() {
                   <p className="text-secondary leading-relaxed">
                     Harkon Byggerådgivning ApS<br />
                     Skovvej 12<br />
-                    4800 Nykøbing F
+                    4800 Nykøbing Falster
                   </p>
                 </div>
               </div>
@@ -85,7 +113,7 @@ export default function ContactForm() {
                   </p>
                 </div>
               </div>
-            </div>
+            </address>
           </motion.div>
 
           {/* Form */}
@@ -165,11 +193,23 @@ export default function ContactForm() {
 
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center px-10 py-5 border border-transparent text-lg font-bold rounded-xl text-white bg-cta hover:bg-cta-hover transition-all shadow-xl hover:shadow-2xl active:scale-95 duration-300"
+                disabled={isSubmitting}
+                className="w-full inline-flex items-center justify-center px-10 py-5 border border-transparent text-lg font-bold rounded-xl text-white bg-cta hover:bg-cta-hover transition-all shadow-xl hover:shadow-2xl active:scale-95 duration-300 disabled:opacity-60 disabled:cursor-not-allowed disabled:active:scale-100"
               >
-                Send besked
-                <Send className="ml-2 h-6 w-6" />
+                {isSubmitting ? 'Sender...' : 'Send besked'}
+                {!isSubmitting && <Send className="ml-2 h-6 w-6" />}
               </button>
+
+              {submitStatus === 'success' && (
+                <p className="text-center text-green-700 font-semibold mt-4" role="status">
+                  Tak for din besked! Vi vender tilbage hurtigst muligt.
+                </p>
+              )}
+              {submitStatus === 'error' && (
+                <p className="text-center text-red-600 font-semibold mt-4" role="alert">
+                  Der opstod en fejl. Prøv venligst igen, eller kontakt os direkte.
+                </p>
+              )}
             </form>
           </motion.div>
         </div>

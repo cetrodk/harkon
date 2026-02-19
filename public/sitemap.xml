@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  XML Sitemap for harkon.dk
+  Protocol: https://www.sitemaps.org/protocol.html
+
+  This is a single-page application (SPA). Only the root URL is listed.
+  If additional pages are added (e.g. /ydelser, /om-os, /projekter), add
+  them here with their own <url> entries.
+
+  NOTE: Ensure this file is updated whenever new pages or canonical URLs are
+  added. Submit this sitemap in Google Search Console after launch.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://www.harkon.dk/</loc>
+    <!-- lastmod: update this whenever major content changes are deployed -->
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <!-- priority 1.0 for the root page of a single-page site -->
+    <priority>1.0</priority>
+    <!-- hreflang: Danish-Denmark is the only locale -->
+    <xhtml:link
+      rel="alternate"
+      hreflang="da-DK"
+      href="https://www.harkon.dk/"
+    />
+  </url>
+
+</urlset>

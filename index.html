@@ -1,13 +1,234 @@
 <!doctype html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- Viewport — required for mobile-first indexing -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
+
+    <!-- Primary meta tags -->
+    <title>Harkon Byggerådgivning | Professionel Byggerådgivning i Nykøbing Falster</title>
+    <meta
+      name="description"
+      content="Harkon Byggerådgivning tilbyder professionel bygherrerådgivning, projektering, byggeledelse og tilstandsvurdering i Nykøbing Falster og omegn. Kontakt os for et uforpligtende tilbud."
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical URL — update to match your production domain -->
+    <link rel="canonical" href="https://www.harkon.dk/" />
+
+    <!-- Open Graph — Facebook, LinkedIn, messaging apps -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.harkon.dk/" />
+    <meta property="og:title" content="Harkon Byggerådgivning | Professionel Byggerådgivning i Nykøbing Falster" />
+    <meta
+      property="og:description"
+      content="Professionel bygherrerådgivning, projektering, byggeledelse og tilstandsvurdering i Nykøbing Falster. Kontakt Harkon for et uforpligtende tilbud."
+    />
+    <!-- Place a 1200x630 branded image at public/og-image.jpg before launch -->
+    <meta property="og:image" content="https://www.harkon.dk/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Harkon Byggerådgivning — professionel byggerådgivning i Nykøbing Falster" />
+    <meta property="og:locale" content="da_DK" />
+    <meta property="og:site_name" content="Harkon Byggerådgivning" />
+
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Harkon Byggerådgivning | Nykøbing Falster" />
+    <meta
+      name="twitter:description"
+      content="Professionel bygherrerådgivning, projektering og byggeledelse i Nykøbing Falster. Kontakt os for et uforpligtende tilbud."
+    />
+    <meta name="twitter:image" content="https://www.harkon.dk/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Harkon Byggerådgivning — professionel byggerådgivning i Nykøbing Falster" />
+
+    <!-- Geo / local SEO hints -->
+    <meta name="geo.region" content="DK-85" />
+    <meta name="geo.placename" content="Nykøbing Falster" />
+
+    <!-- Favicons — add real icon files to public/ before launch -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!--
+      Preconnect to Google Fonts origins before the stylesheet request fires.
+      This eliminates the DNS + TCP + TLS handshake from the critical path and
+      improves LCP on first visit. The crossorigin attribute is required for
+      the font files origin (fonts.gstatic.com).
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!--
+      Load fonts via <link> rather than CSS @import.
+      @import in CSS is render-blocking; a <link> here is parallel-fetched.
+      display=swap prevents invisible text during font load (avoids FOIT).
+      The @import line in src/index.css should be removed — fonts are now
+      loaded from here.
+    -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+    />
+
+    <!-- LocalBusiness + Organization structured data (JSON-LD via @graph) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.harkon.dk/#organization",
+          "name": "Harkon Byggerådgivning ApS",
+          "url": "https://www.harkon.dk/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.harkon.dk/logo.png",
+            "width": 200,
+            "height": 60
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+45-60-22-60-68",
+            "email": "info@harkon.dk",
+            "contactType": "customer service",
+            "availableLanguage": "Danish",
+            "hoursAvailable": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "08:00",
+              "closes": "16:00"
+            }
+          }
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://www.harkon.dk/#localbusiness",
+          "name": "Harkon Byggerådgivning ApS",
+          "alternateName": "Harkon",
+          "description": "Professionel bygherrerådgivning, projektering, tegnestue, byggeledelse, tilstandsvurdering og køberrådgivning i Nykøbing Falster og omegn.",
+          "url": "https://www.harkon.dk/",
+          "telephone": "+45-60-22-60-68",
+          "email": "info@harkon.dk",
+          "vatID": "DK34119406",
+          "image": "https://www.harkon.dk/og-image.jpg",
+          "logo": "https://www.harkon.dk/logo.png",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Skovvej 12",
+            "addressLocality": "Nykøbing Falster",
+            "postalCode": "4800",
+            "addressCountry": "DK"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "08:00",
+              "closes": "16:00"
+            }
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Byggerådgivningsydelser",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Bygherrerådgivning",
+                  "description": "Vi varetager dine interesser som bygherre gennem hele byggeprocessen fra idéudvikling til aflevering."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Projektering og Ingeniørrådgivning",
+                  "description": "Statik, konstruktionstegninger og teknisk rådgivning til bygbare og sikre projekter."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Tegnestue",
+                  "description": "Teknisk udformning af byggeprojekter med skitser, plantegninger og 3D-visualiseringer."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Byggeledelse og Tilsyn",
+                  "description": "Styring af byggepladsen med tilsyn af kvalitet, tid og økonomi."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Tilstandsvurdering",
+                  "description": "Grundige tilstandsrapporter ved køb, salg eller renovering af bygninger."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Køberrådgivning",
+                  "description": "Professionel rådgivning ved huskøb om skjulte og kommende udgifter."
+                }
+              }
+            ]
+          },
+          "parentOrganization": {
+            "@id": "https://www.harkon.dk/#organization"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.harkon.dk/#website",
+          "url": "https://www.harkon.dk/",
+          "name": "Harkon Byggerådgivning",
+          "inLanguage": "da-DK",
+          "publisher": {
+            "@id": "https://www.harkon.dk/#organization"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.harkon.dk/#webpage",
+          "url": "https://www.harkon.dk/",
+          "name": "Harkon Byggerådgivning | Professionel Byggerådgivning i Nykøbing Falster",
+          "description": "Harkon Byggerådgivning tilbyder professionel bygherrerådgivning, projektering, byggeledelse og tilstandsvurdering i Nykøbing Falster og omegn.",
+          "inLanguage": "da-DK",
+          "isPartOf": {
+            "@id": "https://www.harkon.dk/#website"
+          },
+          "about": {
+            "@id": "https://www.harkon.dk/#localbusiness"
+          },
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Forside",
+                "item": "https://www.harkon.dk/"
+              }
+            ]
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

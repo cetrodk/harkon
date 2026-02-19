@@ -1,5 +1,3 @@
-import { Facebook, Linkedin, Instagram } from 'lucide-react';
-
 export default function Footer() {
   return (
     <footer className="bg-primary text-slate-300 py-20 border-t border-slate-800/50">
@@ -17,8 +15,8 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div>
+          {/* Quick Links — nav landmark helps screen readers and crawlers */}
+          <nav aria-label="Sidelinks">
             <h4 className="text-lg font-bold text-white mb-6 font-heading uppercase tracking-widest">Hurtige Links</h4>
             <ul className="space-y-4">
               <li><a href="#services" className="hover:text-accent transition-all hover:translate-x-1 inline-block">Ydelser</a></li>
@@ -26,27 +24,29 @@ export default function Footer() {
               <li><a href="#projects" className="hover:text-accent transition-all hover:translate-x-1 inline-block">Projekter</a></li>
               <li><a href="#contact" className="hover:text-accent transition-all hover:translate-x-1 inline-block">Kontakt</a></li>
             </ul>
-          </div>
+          </nav>
 
-          {/* Contact */}
+          {/* Contact — <address> is the correct semantic element for contact info -->
+          <!-- It signals to parsers (including Google) that this is contact data */}
           <div>
             <h4 className="text-lg font-bold text-white mb-6 font-heading uppercase tracking-widest">Kontakt</h4>
-            <ul className="space-y-4 text-slate-400 font-sans">
-              <li className="flex items-start">
-                <span>Skovvej 12<br />4800 Nykøbing F</span>
-              </li>
-              <li className="font-bold text-slate-500 uppercase tracking-tighter text-xs">CVR: 34119406</li>
-              <li className="pt-2">
+            <address className="not-italic space-y-4 text-slate-400 font-sans">
+              <p>
+                Skovvej 12<br />
+                4800 Nykøbing Falster
+              </p>
+              <p className="font-bold text-slate-500 uppercase tracking-tighter text-xs">CVR: 34119406</p>
+              <p className="pt-2">
                 <a href="tel:+4560226068" className="text-white hover:text-accent transition-colors font-bold text-lg">
                   +45 60 22 60 68
                 </a>
-              </li>
-              <li>
+              </p>
+              <p>
                 <a href="mailto:info@harkon.dk" className="text-slate-300 hover:text-accent transition-colors">
                   info@harkon.dk
                 </a>
-              </li>
-            </ul>
+              </p>
+            </address>
           </div>
         </div>
 
@@ -54,18 +54,6 @@ export default function Footer() {
           <p className="text-sm text-slate-500 font-medium">
             &copy; {new Date().getFullYear()} Harkon Byggerådgivning ApS. Alle rettigheder forbeholdes.
           </p>
-
-          <div className="flex space-x-6">
-            <a href="#" className="p-3 bg-slate-800/50 rounded-xl text-slate-400 hover:text-accent hover:bg-slate-800 transition-all">
-              <Facebook className="w-5 h-5" />
-            </a>
-            <a href="#" className="p-3 bg-slate-800/50 rounded-xl text-slate-400 hover:text-accent hover:bg-slate-800 transition-all">
-              <Linkedin className="w-5 h-5" />
-            </a>
-            <a href="#" className="p-3 bg-slate-800/50 rounded-xl text-slate-400 hover:text-accent hover:bg-slate-800 transition-all">
-              <Instagram className="w-5 h-5" />
-            </a>
-          </div>
         </div>
       </div>
     </footer>

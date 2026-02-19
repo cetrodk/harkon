@@ -1,16 +1,20 @@
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
-import heroImg from '@/src/assets/harkon_hero.png';
+import heroImg from '@/src/assets/harkon_hero.webp';
 
 export default function Hero() {
   return (
-    <div className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section aria-label="Introduktion" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImg}
-          alt="Construction site"
+          alt="Byggeplads i Nykøbing Falster — Harkon Byggerådgivning leverer professionel bygherrerådgivning og projektering"
           className="w-full h-full object-cover"
+          width="1920"
+          height="1080"
+          loading="eager"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-slate-900/40" />
       </div>
@@ -63,6 +67,6 @@ export default function Hero() {
           />
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 }
