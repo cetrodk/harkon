@@ -1,8 +1,20 @@
-import { motion } from 'motion/react';
-import { FileText, ArrowRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { FileText, ArrowRight, X, ZoomIn } from 'lucide-react';
 import tegningImg from '@/src/assets/tegning.jpg';
 
 export default function PriceExample() {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  useEffect(() => {
+    if (!modalOpen) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setModalOpen(false);
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [modalOpen]);
+
   return (
     <section id="price-example" className="py-24 bg-primary relative overflow-hidden">
       {/* Decorative blur orbs — same pattern as CTA */}
@@ -37,15 +49,21 @@ export default function PriceExample() {
             transition={{ duration: 1, ease: 'easeOut' }}
             className="relative"
           >
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+            <div
+              className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 cursor-pointer group"
+              onClick={() => setModalOpen(true)}
+            >
               <img
                 src={tegningImg}
                 alt="Plantegning af enfamiliehus på 165 m2 med carport — byggeansøgning udarbejdet af Harkon Byggerådgivning"
-                className="w-full h-auto object-contain bg-white"
+                className="w-full h-auto object-contain"
                 loading="lazy"
                 width="1500"
                 height="900"
               />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
+                <ZoomIn className="w-10 h-10 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" />
+              </div>
             </div>
           </motion.div>
 
@@ -94,6 +112,38 @@ export default function PriceExample() {
           </motion.div>
         </div>
       </div>
+
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {modalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 cursor-pointer"
+            onClick={() => setModalOpen(false)}
+          >
+            <button
+              onClick={() => setModalOpen(false)}
+              className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors cursor-pointer"
+              aria-label="Luk"
+            >
+              <X className="w-8 h-8" />
+            </button>
+            <motion.img
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3, ease: 'easeOut' }}
+              src={tegningImg}
+              alt="Plantegning af enfamiliehus på 165 m2 med carport"
+              className="max-w-full max-h-[90vh] object-contain rounded-2xl shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

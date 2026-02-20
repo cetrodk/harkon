@@ -79,29 +79,34 @@ export default function About() {
                 loading="lazy"
                 className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60" />
-              <div className="absolute bottom-0 left-0 right-0 p-10">
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent" />
+
+              {/* Bottom caption */}
+              <div className="absolute bottom-0 left-0 right-0 p-8 pb-10">
                 <p className="text-white font-bold text-2xl font-heading">Vi bygger fremtiden sammen</p>
               </div>
-            </div>
 
-            {/* Floating Card */}
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="absolute -bottom-10 -left-10 bg-white/90 backdrop-blur-xl p-8 rounded-3xl shadow-2xl max-w-xs hidden md:block border border-white/50"
-            >
-              <div className="flex items-center space-x-5">
-                <div className="bg-accent/10 p-4 rounded-2xl">
-                  <Users className="w-8 h-8 text-accent" />
+              {/* Floating stat card — lives inside the image frame over the gradient scrim */}
+              <motion.div
+                initial={{ y: 12, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.6, duration: 0.7, ease: "easeOut" }}
+                className="absolute top-8 right-8 hidden md:block"
+              >
+                <div className="bg-white/15 backdrop-blur-xl border border-white/25 rounded-2xl px-5 py-4 shadow-xl">
+                  <div className="flex items-center gap-4">
+                    <div className="bg-white/20 p-3 rounded-xl shrink-0">
+                      <Users className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <p className="text-white/70 text-xs font-bold uppercase tracking-widest leading-none mb-1.5">Kundetilfredshed</p>
+                      <p className="text-white text-3xl font-black font-heading leading-none tabular-nums">98%</p>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-sm text-secondary font-bold uppercase tracking-wider">Tilmeldte</p>
-                  <p className="text-3xl font-black text-primary font-heading">98%</p>
-                </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </motion.div>
         </div>
       </div>
