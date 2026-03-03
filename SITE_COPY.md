@@ -89,24 +89,20 @@
 
 ## Showcase (Projekter)
 
-- **Overskrift:** Udvalgte **Projekter**
+- **Overskrift:** Projekter
 - **Beskrivelse:** Se et udvalg af de projekter, vi har været en del af. Fra teknisk udfordrende erhvervsbyggerier til moderne private boliger.
 
 ### Projekt 1
-- **Titel:** Nyt Boligkvarter
-- **Kategori:** Bygherrerådgivning
+- **Titel:** Bygherrerådgivning
 
 ### Projekt 2
-- **Titel:** Erhvervsbyggeri
-- **Kategori:** Projektering
+- **Titel:** Projektering
 
 ### Projekt 3
-- **Titel:** Privat Tilbygning
-- **Kategori:** Tegnestue
+- **Titel:** Tegnestue
 
 ### Projekt 4
-- **Titel:** Offentlig Institution
-- **Kategori:** Tilsyn
+- **Titel:** Tilsyn
 
 - **Knap:** Se alle projekter
 

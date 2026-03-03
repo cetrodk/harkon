@@ -3,27 +3,23 @@ import { ArrowRight } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Nyt Boligkvarter',
-    category: 'Bygherrerådgivning',
+    title: <>Bygherre-<br />rådgivning</>,
     // SEO alt: describe the image content, context and relevance to the business
     alt: 'Nyt boligkvarter med moderne parcelhuse — Harkon Byggerådgivning varetog bygherrerådgivning fra idé til aflevering',
     image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
-    title: 'Erhvervsbyggeri',
-    category: 'Projektering',
+    title: 'Projektering',
     alt: 'Moderne erhvervsbygning med glasfacade — projektering og ingeniørrådgivning udført af Harkon Byggerådgivning',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
-    title: 'Privat Tilbygning',
-    category: 'Tegnestue',
+    title: 'Tegnestue',
     alt: 'Moderne privat tilbygning til eksisterende bolig — plantegninger og teknisk tegning udført af Harkon Byggerådgivning',
     image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2940&auto=format&fit=crop',
   },
   {
-    title: 'Offentlig Institution',
-    category: 'Tilsyn',
+    title: 'Tilsyn',
     alt: 'Offentlig institutionsbygning under opførelse — Harkon Byggerådgivning førte kvalitetstilsyn på projektet',
     image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
@@ -54,7 +50,7 @@ export default function Showcase() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
           {projects.map((project, index) => (
             <motion.div
-              key={project.title}
+              key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -72,9 +68,6 @@ export default function Showcase() {
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
 
               <div className="absolute bottom-0 left-0 right-0 p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-out">
-                <span className="text-accent text-xs font-black uppercase tracking-[0.2em] mb-3 block">
-                  {project.category}
-                </span>
                 <h3 className="text-2xl font-bold text-white mb-2 font-heading">{project.title}</h3>
                 <div className="w-10 h-1 bg-accent rounded-full transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 delay-100" />
               </div>
