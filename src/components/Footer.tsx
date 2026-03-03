@@ -10,8 +10,8 @@ export default function Footer() {
               HARKON<span className="text-accent">.</span>
             </h3>
             <p className="text-slate-400 max-w-sm leading-relaxed font-sans text-lg">
-              Professionel byggerådgivning og ingeniørarbejde i Nykøbing Falster.
-              Vi sikrer arkitektonisk kvalitet og teknisk tryghed i dit byggeprojekt.
+              Professionel byggerådgivning i Nykøbing Falster.
+              Vi sikrer kvalitet og effektivitet i dit byggeprojekt.
             </p>
           </div>
 
@@ -21,7 +21,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li><a href="#services" className="hover:text-accent transition-all hover:translate-x-1 inline-block">Ydelser</a></li>
               <li><a href="#about" className="hover:text-accent transition-all hover:translate-x-1 inline-block">Om os</a></li>
-              <li><a href="#projects" className="hover:text-accent transition-all hover:translate-x-1 inline-block">Projekter</a></li>
+              <li><a href="#pricing" className="hover:text-accent transition-all hover:translate-x-1 inline-block">Priser</a></li>
               <li><a href="#contact" className="hover:text-accent transition-all hover:translate-x-1 inline-block">Kontakt</a></li>
             </ul>
           </nav>
@@ -52,7 +52,7 @@ export default function Footer() {
 
         <div className="border-t border-slate-800/50 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-sm text-slate-500 font-medium">
-            &copy; {new Date().getFullYear()} Harkon Byggerådgivning ApS. Alle rettigheder forbeholdes.
+            &copy; 2024 Harkon
           </p>
         </div>
       </div>

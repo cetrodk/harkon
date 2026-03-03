@@ -16,7 +16,7 @@ export default function PriceExample() {
   }, [modalOpen]);
 
   return (
-    <section id="price-example" className="py-24 bg-primary relative overflow-hidden">
+    <section id="pricing" className="py-24 bg-primary relative overflow-hidden">
       {/* Decorative blur orbs — same pattern as CTA */}
       <div className="absolute -top-24 -left-24 w-96 h-96 bg-accent opacity-10 rounded-full blur-[100px]" />
       <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-cta opacity-10 rounded-full blur-[100px]" />

@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { MapPin, CheckCircle, Award, Users } from 'lucide-react';
+import { MapPin, CheckCircle, Award, Users, DollarSign } from 'lucide-react';
 import aboutImg from '@/src/assets/about.webp';
 
 export default function About() {
@@ -21,13 +21,14 @@ export default function About() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-8 leading-[1.15] font-heading">
-              Din lokale partner i <br />
-              <span className="text-accent">professionel byggerådgivning</span>
+              Din pålidelige partner inden for <br />
+              <span className="text-accent">byggeri og anlæg</span>
             </h2>
 
             <p className="text-lg text-secondary mb-10 leading-relaxed font-sans">
-              Harkon Byggerådgivning er en specialiseret rådgivningsvirksomhed med dybe rødder i Nykøbing Falster.
-              Vi kombinerer lokal indsigt med teknisk ekspertise for at levere byggeprojekter af højeste kvalitet.
+              Vi tilbyder professionel rådgivning til alle typer byggeprojekter, fra mindre renoveringer til omfattende nybyggerier.
+              Uanset dit projekts størrelse hjælper vi dig med at træffe de rigtige beslutninger ved at stille vores ekspertise til rådighed.
+              Vores mål er at sikre, at dit projekt bliver en succes – både økonomisk, tidsmæssigt og kvalitetsmæssigt.
             </p>
 
             <div className="space-y-6 mb-10">
@@ -36,8 +37,8 @@ export default function About() {
                   <CheckCircle className="w-6 h-6 text-accent" />
                 </div>
                 <div className="ml-5">
-                  <h4 className="text-lg font-bold text-primary mb-1 font-heading">Erfaring og Ekspertise</h4>
-                  <p className="text-secondary">Mange års erfaring med komplekse byggeprojekter i regionen.</p>
+                  <h4 className="text-lg font-bold text-primary mb-1 font-heading">Teknisk Indsigt</h4>
+                  <p className="text-secondary">Grundig teknisk indsigt og viden om byggeprocesser.</p>
                 </div>
               </div>
               <div className="flex items-start group">
@@ -45,8 +46,17 @@ export default function About() {
                   <Award className="w-6 h-6 text-cta" />
                 </div>
                 <div className="ml-5">
-                  <h4 className="text-lg font-bold text-primary mb-1 font-heading">Kvalitetssikring</h4>
-                  <p className="text-secondary">Vi går aldrig på kompromis med kvaliteten i vores rådgivning.</p>
+                  <h4 className="text-lg font-bold text-primary mb-1 font-heading">Erfaring</h4>
+                  <p className="text-secondary">Flere års erfaring fra byggebranchen.</p>
+                </div>
+              </div>
+              <div className="flex items-start group">
+                <div className="flex-shrink-0 mt-1 p-2 bg-accent/5 rounded-lg group-hover:bg-accent/10 transition-colors">
+                  <DollarSign className="w-6 h-6 text-accent" />
+                </div>
+                <div className="ml-5">
+                  <h4 className="text-lg font-bold text-primary mb-1 font-heading">Omkostningseffektiv</h4>
+                  <p className="text-secondary">Omkostningseffektiv planlægning af dit projekt.</p>
                 </div>
               </div>
             </div>

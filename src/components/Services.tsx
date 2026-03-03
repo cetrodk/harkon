@@ -1,16 +1,16 @@
 import { motion } from 'motion/react';
-import { Building2, Ruler, PencilRuler, HardHat, ClipboardCheck, Home } from 'lucide-react';
+import { Home, FileCheck, PencilRuler, CalendarCheck, ClipboardCheck, HardHat } from 'lucide-react';
 
 const services = [
   {
-    icon: <Building2 className="w-10 h-10 text-cta" />,
-    title: 'Bygherrerådgivning',
-    description: 'Vi varetager dine interesser som bygherre gennem hele byggeprocessen. Fra idéudvikling til aflevering.',
+    icon: <Home className="w-10 h-10 text-cta" />,
+    title: 'Køberrådgivning',
+    description: 'Ved køb af hus, kan Harkon hjælpe hvis der er tvivl om eventuelle skjulte eller kommende udgifter.',
   },
   {
-    icon: <Ruler className="w-10 h-10 text-accent" />,
-    title: 'Projektering & Ingeniør',
-    description: 'Statik, konstruktionstegninger og teknisk rådgivning. Vi sikrer, at dit projekt er bygbart og sikkert.',
+    icon: <FileCheck className="w-10 h-10 text-accent" />,
+    title: 'Byggetilladelse',
+    description: 'Vi hjælper med at få tilladelsen i hus, på jeres drømmeprojekt.',
   },
   {
     icon: <PencilRuler className="w-10 h-10 text-cta" />,
@@ -18,19 +18,19 @@ const services = [
     description: 'Teknisk udformning af byggeprojekter. Skitser, plantegninger og 3D-visualiseringer til byggesager.',
   },
   {
-    icon: <HardHat className="w-10 h-10 text-accent" />,
-    title: 'Byggeledelse & Tilsyn',
-    description: 'Vi styrer byggepladsen og fører tilsyn med kvalitet, tid og økonomi, så du undgår overraskelser.',
+    icon: <CalendarCheck className="w-10 h-10 text-accent" />,
+    title: '1 og 5 års gennemgang',
+    description: 'Vi hjælper med gennemgang af huset, så eventuelle fejl og mangler kan videregives til håndværker.',
   },
   {
     icon: <ClipboardCheck className="w-10 h-10 text-cta" />,
-    title: 'Tilstandsvurdering',
-    description: 'Få overblik over bygningens tilstand ved køb, salg eller renovering. Vi udarbejder grundige rapporter.',
+    title: 'Afleveringsforretning',
+    description: 'Grundig gennemgang af byggeprojekt ved aflevering. Sikrer kvalitet og overholdelse af aftaler.',
   },
   {
-    icon: <Home className="w-10 h-10 text-accent" />,
-    title: 'Køberrådgivning',
-    description: 'Ved køb af hus, kan Harkon hjælpe hvis der er tvivl om eventuelle skjulte eller kommende udgifter.',
+    icon: <HardHat className="w-10 h-10 text-accent" />,
+    title: 'Tilsyn og kontrol',
+    description: 'Ved nybyggeri og renovering hjælper vi med tilsyn af jeres projekt, for at sikre at alle forpligtelser og regler bliver overholdt.',
   },
 ];
 
@@ -40,11 +40,10 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-6 font-heading">
-            Vores <span className="text-accent">Ekspertise</span>
+            Vores <span className="text-accent">Ydelser</span>
           </h2>
           <p className="text-lg text-secondary max-w-2xl mx-auto leading-relaxed">
-            Vi tilbyder en bred vifte af ydelser inden for byggerådgivning og ingeniørarbejde.
-            Skræddersyede løsninger til både private og erhverv.
+            Vi tilbyder en bred vifte af bygge- og rådgivningstjenester til alle dine behov.
           </p>
         </div>
 
