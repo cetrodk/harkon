@@ -83,7 +83,7 @@ export default function ContactForm() {
                 <div className="ml-8">
                   <h4 className="text-xl font-bold text-primary mb-2 font-heading">Adresse</h4>
                   <p className="text-secondary leading-relaxed">
-                    Harkon Byggerådgivning ApS<br />
+                    Harkon<br />
                     Skovvej 12<br />
                     4800 Nykøbing Falster
                   </p>

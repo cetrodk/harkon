@@ -29,8 +29,8 @@ export default function App() {
         <Services />
         <PriceExample />
         <About />
-        <Showcase />
-        <Testimonials />
+        {/* <Showcase /> */}
+        {/* <Testimonials /> */}
         <CTA />
         <ContactForm />
       </main>
