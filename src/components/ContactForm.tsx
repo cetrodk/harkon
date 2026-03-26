@@ -47,7 +47,7 @@ export default function ContactForm() {
     } finally {
       setIsSubmitting(false);
     }
-  }, []);
+  }, [formData]);
 
   return (
     <section id="contact" className="py-24 bg-[#F8FAFC]">
