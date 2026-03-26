@@ -16,7 +16,7 @@
 
 ## Hero (Forside)
 
-- **Overskrift:** Professionel **Byggerådgivning** i Nykøbing Falster
+- **Overskrift:** Professionel **Byggerådgivning**
 - **Beskrivelse:** Vi hjælper dig med at realisere dit byggeprojekt med teknisk præcision og arkitektonisk indsigt. Specialiseret rådgivning inden for byggeri, anlæg og energioptimering.
 - **Primær knap:** Få et uforpligtende tilbud
 - **Sekundær knap:** Se vores ydelser
@@ -38,7 +38,7 @@
 
 ### Ydelse 3
 - **Titel:** Tegnestue
-- **Beskrivelse:** Teknisk udformning af byggeprojekter. Skitser, plantegninger og 3D-visualiseringer til byggesager.
+- **Beskrivelse:** Tegning af professionelle digitale tegninger.
 
 ### Ydelse 4
 - **Titel:** 1 og 5 års gennemgang
@@ -111,7 +111,7 @@
 ## Call-to-Action (CTA)
 
 - **Overskrift:** Klar til at starte dit **næste projekt?**
-- **Beskrivelse:** Kontakt os i dag for en uforpligtende snak om dine muligheder. Vi står klar til at hjælpe dig med teknisk indsigt og professionel rådgivning.
+- **Beskrivelse:** Kontakt os i dag for en uforpligtende snak om dine ønsker, og muligheder. Også selvom det måske ikke står under ydelser. Vi står klar til at hjælpe dig med teknisk indsigt og professionel rådgivning.
 - **Primær knap:** Få et uforpligtende tilbud
 - **Sekundær knap:** Ring til os: +45 60 22 60 68
 
@@ -120,18 +120,18 @@
 ## Kontakt
 
 - **Overskrift:** Kontakt **Os**
-- **Beskrivelse:** Har du spørgsmål, eller ønsker du et uforpligtende tilbud på dit byggeprojekt? Udfyld formularen eller kontakt os direkte. Vi svarer inden for 24 timer.
+- **Beskrivelse:** Har du spørgsmål, eller ønsker du et uforpligtende tilbud på dit byggeprojekt? Udfyld formularen eller kontakt os direkte. Vi svarer oftest inden for 24 timer.
 - **Adresse:** Skovvej 12, 4800 Nykøbing Falster
 - **Telefon:** +45 60 22 60 68
-- **Telefontid:** Man-Fre: 08:00 - 16:00
-- **Email:** info@harkon.dk
+- **Telefontid:** Man-Fre: 07:00 - 16:00
+- **Email:** brian@harkon.dk
 - **Succesbesked:** Tak for din besked! Vi vender tilbage hurtigst muligt.
 
 ### Formular-felter
 - **Felt 1:** Navn (placeholder: Dit fulde navn)
 - **Felt 2:** Email (placeholder: din@email.dk)
-- **Felt 3:** Telefon (placeholder: +45 60 22 60 68)
-- **Felt 4:** Besked (placeholder: Beskriv dit projekt...)
+- **Felt 3:** Telefon (placeholder: +45 00 00 00 00)
+- **Felt 4:** Besked (placeholder: Beskriv dit projekt.)
 - **Knap:** Send besked
 
 ---

@@ -27,8 +27,7 @@ export default function Hero() {
           className="max-w-3xl"
         >
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 leading-[1.1] font-heading">
-            Professionel <span className="text-accent">Byggerådgivning</span> <br />
-            i Nykøbing Falster
+            Professionel <span className="text-accent">Byggerådgivning</span>
           </h1>
           <p className="text-lg sm:text-xl text-slate-300 mb-10 max-w-2xl leading-relaxed">
             Vi hjælper dig med at realisere dit byggeprojekt med teknisk præcision og arkitektonisk indsigt.

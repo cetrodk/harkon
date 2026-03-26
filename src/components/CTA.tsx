@@ -19,7 +19,7 @@ export default function CTA() {
             Klar til at starte dit <span className="text-accent underline decoration-accent/30 underline-offset-8">næste projekt?</span>
           </h2>
           <p className="text-lg sm:text-xl text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed font-sans">
-            Kontakt os i dag for en uforpligtende snak om dine muligheder. Vi står klar til at hjælpe dig med teknisk indsigt og professionel rådgivning.
+            Kontakt os i dag for en uforpligtende snak om dine ønsker, og muligheder. Også selvom det måske ikke står under ydelser. Vi står klar til at hjælpe dig med teknisk indsigt og professionel rådgivning.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">

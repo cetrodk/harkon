@@ -15,7 +15,7 @@ const services = [
   {
     icon: <PencilRuler className="w-10 h-10 text-cta" />,
     title: 'Tegnestue',
-    description: 'Teknisk udformning af byggeprojekter. Skitser, plantegninger og 3D-visualiseringer til byggesager.',
+    description: 'Tegning af professionelle digitale tegninger.',
   },
   {
     icon: <CalendarCheck className="w-10 h-10 text-accent" />,

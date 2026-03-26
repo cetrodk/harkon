@@ -61,7 +61,7 @@ export default function ContactForm() {
             </h2>
             <p className="text-lg text-secondary mb-12 leading-relaxed font-sans">
               Har du spørgsmål, eller ønsker du et uforpligtende tilbud på dit byggeprojekt?
-              Udfyld formularen eller kontakt os direkte. Vi svarer inden for 24 timer.
+              Udfyld formularen eller kontakt os direkte. Vi svarer oftest inden for 24 timer.
             </p>
 
             {/*
@@ -96,7 +96,7 @@ export default function ContactForm() {
                       +45 60 22 60 68
                     </a>
                   </p>
-                  <p className="text-sm text-slate-400 mt-2 font-bold uppercase tracking-wider">Man-Fre: 08:00 - 16:00</p>
+                  <p className="text-sm text-slate-400 mt-2 font-bold uppercase tracking-wider">Man-Fre: 07:00 - 16:00</p>
                 </div>
               </div>
 
@@ -107,8 +107,8 @@ export default function ContactForm() {
                 <div className="ml-8">
                   <h4 className="text-xl font-bold text-primary mb-2 font-heading">Email</h4>
                   <p className="text-secondary leading-relaxed">
-                    <a href="mailto:info@harkon.dk" className="hover:text-cta transition-colors font-semibold">
-                      info@harkon.dk
+                    <a href="mailto:brian@harkon.dk" className="hover:text-cta transition-colors font-semibold">
+                      brian@harkon.dk
                     </a>
                   </p>
                 </div>
@@ -170,7 +170,7 @@ export default function ContactForm() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-6 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all bg-slate-50 focus:bg-white font-medium"
-                    placeholder="+45 60 22 60 68"
+                    placeholder="+45 00 00 00 00"
                   />
                 </div>
               </div>
@@ -187,7 +187,7 @@ export default function ContactForm() {
                   required
                   rows={5}
                   className="w-full px-6 py-4 rounded-xl border border-slate-200 focus:ring-2 focus:ring-accent/20 focus:border-accent outline-none transition-all bg-slate-50 focus:bg-white resize-none font-medium"
-                  placeholder="Beskriv dit projekt..."
+                  placeholder="Beskriv dit projekt."
                 />
               </div>
 
