@@ -13,21 +13,9 @@ npm install
 npm run dev
 ```
 
-## Contact form (Resend)
+## Contact form (Formspree)
 
-The contact form sends email notifications via [Resend](https://resend.com) through a Vercel serverless function at `api/contact.ts`.
-
-**Setup:**
-
-1. Create a [Resend API key](https://resend.com/api-keys)
-2. Add your sending domain in Resend (e.g. `harkon.dk`)
-3. Set `RESEND_API_KEY` in Vercel project settings → Environment Variables
-
-## Environment variables
-
-| Variable | Description |
-|---|---|
-| `RESEND_API_KEY` | Resend API key for contact form emails |
+The contact form sends email notifications via [Formspree](https://formspree.io). No backend required — the form POSTs directly to the Formspree endpoint.
 
 ## Deployment
 
