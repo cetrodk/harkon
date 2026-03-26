@@ -25,9 +25,12 @@ The contact form sends email notifications via [Resend](https://resend.com) thro
 
 ## Environment variables
 
-| Variable | Description |
-|---|---|
-| `RESEND_API_KEY` | Resend API key for contact form emails |
+| Variable | Description | Example |
+|---|---|---|
+| `RESEND_API_KEY` | Resend API key | `re_xxxxx` |
+| `EMAIL_FROM` | Sender name and address | `Harkon Kontaktformular <noreply@harkon.dk>` |
+| `EMAIL_TO` | Recipient email | `brian@harkon.dk` |
+| `EMAIL_SUBJECT_PREFIX` | Email subject prefix | `Ny henvendelse` |
 
 ## Deployment
 

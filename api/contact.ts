@@ -16,10 +16,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   try {
     await resend.emails.send({
-      from: 'Harkon Kontaktformular <noreply@harkon.dk>',
-      to: 'brian@harkon.dk',
+      from: process.env.EMAIL_FROM!,
+      to: process.env.EMAIL_TO!,
       replyTo: email,
-      subject: `Ny henvendelse fra ${name}`,
+      subject: `${process.env.EMAIL_SUBJECT_PREFIX || 'Ny henvendelse'} fra ${name}`,
       html: `
         <h2>Ny henvendelse fra harkon.dk</h2>
         <p><strong>Navn:</strong> ${name}</p>
