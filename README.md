@@ -1,20 +1,34 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Harkon Byggerådgivning
 
-# Run and deploy your AI Studio app
+Website for Harkon Byggerådgivning — professionel byggerådgivning i Nykøbing Falster.
 
-This contains everything you need to run your app locally.
+**Stack:** Vite + React 19 + Tailwind CSS v4 + Framer Motion
 
-View your app in AI Studio: https://ai.studio/apps/090ef58e-707c-408a-9f03-9982a24216a6
+**Deployed on:** [Vercel](https://harkon.vercel.app)
 
-## Run Locally
+## Local development
 
-**Prerequisites:**  Node.js
+```bash
+npm install
+npm run dev
+```
 
+## Contact form (Resend)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+The contact form sends email notifications via [Resend](https://resend.com) through a Vercel serverless function at `api/contact.ts`.
+
+**Setup:**
+
+1. Create a [Resend API key](https://resend.com/api-keys)
+2. Add your sending domain in Resend (e.g. `harkon.dk`)
+3. Set `RESEND_API_KEY` in Vercel project settings → Environment Variables
+
+## Environment variables
+
+| Variable | Description |
+|---|---|
+| `RESEND_API_KEY` | Resend API key for contact form emails |
+
+## Deployment
+
+Deploys automatically to Vercel on push to `main`.

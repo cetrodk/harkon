@@ -33,8 +33,13 @@ export default function ContactForm() {
     setSubmitStatus('idle');
 
     try {
-      // TODO: Replace with actual API call
-      await new Promise(resolve => setTimeout(resolve, 500));
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error();
       setSubmitStatus('success');
       setFormData(initialFormData);
     } catch {
